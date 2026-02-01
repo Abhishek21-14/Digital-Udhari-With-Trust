@@ -10,3 +10,21 @@ input {
 button{
     padding: 8px 20px;
 }
+
+.menu{
+    margin-top: 30px;
+}
+
+.menu a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #2c7be5;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background: #1a5fc4;
+}
