@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer Management</title>
 </head>
 <body>
-    <h2>Customer</h2>
+    <h2>Customer Management</h2>
+
+    <form action="" id="customerForm">
+        <input type="text" id="cname" placeholder="Customer name">
+        <input type="text" id="mobile" placeholder="Mobile Number">
+        <button type="submit">Add Customer</button>
+    </form>
+
+    <br> 
+
+    <table border="1" width="50%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile</th>
+            </tr>
+        </thead>
+        <tbody id="customerTable"></tbody>
+    </table>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
