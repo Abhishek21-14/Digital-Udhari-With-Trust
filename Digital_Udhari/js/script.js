@@ -6,6 +6,7 @@ document.getElementById("loginForm").addEventListener("submit",function(e){
     if(user === "" || pass === ""){
         alert("Please fill all fields");
     }else{
-        alert("login validation success (DB Next step)")
+        Window.location.href = "dashboard.html";
     }
+
 })
