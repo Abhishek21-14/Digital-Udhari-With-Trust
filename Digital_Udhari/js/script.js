@@ -76,19 +76,69 @@ if(udhariForm) {
 
         // basic trust score logic
         let trustScore = 100;
-
-        if (amount > 5000) trustScore -= 30;
-        else if (amount > 2000) trustScore -= 15;
-        else trustScore -= 5;
-
-        let risk = "Low Risk";
-        if (trustScore < 50) risk = "High Risk";
-        else if (trustScore < 80) risk = "Medium Risk";
-
-        document.getElementById("scoreResult").innerHtml = `Trust Score: ${trustScore} | ${risk}`;
+        let newScore = trustScore;
+        let tScore = document.getElementById("scoreResult");
+        let risk = "Low Risk";    
+        
+        if (amount > 5000) {
+            newScore -= 30;
+            risk = "High risk"
+        }else if (amount > 2000) {
+            newScore -= 15;
+            risk = "Medium risk"
+        }else {
+            newScore -= 5;
+            risk = "Low risk"
+        }   
+              
+        tScore.innerHTML = `Trust Score: ${newScore} | ${risk}`
 
     });
 }
+
+
+/* ***************************************************
+                  Payment Mogule
+******************************************************/
+
+
+const payForm = document.getElementById("paymentForm");
+
+if(payForm){
+    payForm.addEventListener("submit", function(e){
+        e.preventDefault;
+
+        let payCustomer = document.getElementById("payCustomer").value;
+        let payAmount = document.getElementById("payAmount").value;
+
+        if(payCustomer === "" || payAmount === ""){
+            alert("Please fill required fields")
+        }else if (payAmount < "0"){
+            alert("Please fill valid Amount")
+        }
+
+    // ***********Update Trust Score ************
+    
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
